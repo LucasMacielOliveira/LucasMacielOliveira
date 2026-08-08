@@ -9,19 +9,7 @@
 - 🚀 Interested in Back-end Development and Software Engineering
 - 📚 Always learning something new
 
-<br>
 
-### 🌐 Connect with me
-
-<a href="SEU_LINK_LINKEDIN">
-    <img src="https://img.shields.io/badge/LinkedIn-0077B5?style=for-the-badge&logo=linkedin&logoColor=white">
-</a>
-
-<a href="mailto:SEU_EMAIL">
-    <img src="https://img.shields.io/badge/Outlook-0078D4?style=for-the-badge&logo=microsoftoutlook&logoColor=white">
-</a>
-
-<br><br>
 
 ### 🛠️ Languages & Tools
 
