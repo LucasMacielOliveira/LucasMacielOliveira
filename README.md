@@ -10,9 +10,6 @@
 - 📚 Always learning something new
 
 
-
-### 🛠️ Languages & Tools
-
 ### 🛠️ Languages & Tools
 
 <div>
