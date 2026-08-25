@@ -1,0 +1,54 @@
+name: Atualizar cobrinha das contribuições
+
+on:
+  schedule:
+    # 06h17 UTC corresponde a 03h17 no horário de Brasília.
+    - cron: "17 6 * * *"
+
+  # Permite executar manualmente pela aba Actions do repositório.
+  workflow_dispatch:
+
+  # Atualiza a animação quando o README ou este workflow forem alterados.
+  push:
+    branches:
+      - main
+      - master
+    paths:
+      - README.md
+      - .github/workflows/snake.yml
+
+permissions:
+  contents: read
+
+jobs:
+  gerar-cobrinha:
+    name: Gerar e publicar animação
+    runs-on: ubuntu-latest
+    timeout-minutes: 10
+
+    # Apenas esta tarefa recebe acesso para publicar a branch output.
+    permissions:
+      contents: write
+
+    concurrency:
+      group: cobrinha-${{ github.repository }}
+      cancel-in-progress: true
+
+    steps:
+      - name: Gerar versões clara e escura da cobrinha
+        uses: Platane/snk/svg-only@v3
+        with:
+          github_user_name: ${{ github.repository_owner }}
+          outputs: |
+            dist/github-contribution-grid-snake.svg
+            dist/github-contribution-grid-snake-dark.svg?palette=github-dark
+
+      - name: Publicar animações na branch output
+        uses: crazy-max/ghaction-github-pages@v5
+        with:
+          target_branch: output
+          build_dir: dist
+          keep_history: true
+          commit_message: "chore: atualizar animação das contribuições"
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
