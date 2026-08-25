@@ -85,7 +85,7 @@ Projetos em destaque
     <td width="50%" valign="top">
       <h3>🔎 CheckFlow</h3>
       <p>Sistema criado para organizar processos internos, acompanhar atividades e tornar fluxos operacionais mais confiáveis.</p>
-      <p><strong>Tecnologias:</strong> Python, PostgreSQL e automação de processos.</p>
+      <p><strong>Tecnologias:</strong> JavaScript,Node.js, Express.Js, HTML5, CSS3 e  PostgreSQL</p>
       <a href="https://github.com/LucasMacielOliveira/CheckFlow-Ra-zen">
         <img src="https://img.shields.io/badge/Conhecer_o_projeto-1F6FEB?style=for-the-badge&amp;logo=github&amp;logoColor=white" alt="Conhecer o CheckFlow" />
       </a>
